@@ -6,6 +6,17 @@ const displayTime = () => {
     let data = new Date();
 
     // Getting hour, mins , secs from date
+    let hh = data.getHours();
+    let mm = data.getMinutes();
+    let ss = data.getSeconds();
+
+    let hRotation = 30 * hh + mm / 2;
+    let mRotatoin = 6 * mm;
+    let sRotation = 6 * ss;
+
+    hour.style.transform = `rotate(${hRotation}deg)`
+    min.style.transform = `rotate(${mRotatoin}deg)`
+    sec.style.transform = `rotate(${sRotation}deg)`
 }
 
 setInterval(displayTime, 1000)
