@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box; 
     font-family: sans-serif;
-    color : #ffff
+    color : #ffff;
 }
 
 body{
@@ -12,4 +12,22 @@ body{
     align-items: center;
     min-height: 100vh;
     background-color: #212121;
+}
+
+.container {
+    position: relative;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .5);
+    box-shadow:  0 0 30px rgba(0, 0, 0, .9);
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(3deg))
 }
