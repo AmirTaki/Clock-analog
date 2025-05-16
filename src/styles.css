@@ -25,11 +25,31 @@ body{
     background-color: rgba(255, 255, 255, .1);
     border: 2px solid rgba(255, 255, 255, .5);
     box-shadow:  0 0 30px rgba(0, 0, 0, .9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .clock span {
     position: absolute;
-    transform: rotateZ(calc(30deg * var(--i)));  /*  360 / 12 = 30 deg  */
+    /* 360 / 12 = 30 deg */
+    transform: rotateZ(calc(30deg * var(--i)));   
     inset: 12px;
     text-align: center;
+}
+
+
+.clock span b {
+    transform: rotate(calc(-30ded * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
 }
